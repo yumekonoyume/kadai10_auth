@@ -1,0 +1,189 @@
+/* 全体の設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #3b5323;
+    color: white;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 30px;
+}
+
+.navbar {
+    background-color: #3b5323;
+    border: none;
+    height: auto;
+}
+
+.navbar-header .navbar-brand {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.navbar-header .navbar-brand:hover {
+    color: #d1e7dd;
+}
+
+.navbar-right a {
+    color: #f5f5f5 !important; /* テキストの色を白に近い色に変更（優先度を上げる） */
+    font-size: 0.7em;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.navbar-right a:hover {
+    color: #ffffff !important; /* ホバー時には完全な白色に変更 */
+    text-decoration: underline;
+}
+
+/* ソートボタンのスタイル */
+.sort-buttons {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 10px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 小さめのボタンスタイル */
+.sort-buttons .btn {
+    padding: 5px 15px; /* 余白を減らしてボタンを小さく */
+    font-size: 0.7em; /* 文字サイズを少し小さく */
+    color: white;
+    background-color: #319117;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.sort-buttons .btn:hover {
+    background-color: hsla(118, 61%, 43%, 0.598);
+}
+
+/* メインコンテンツのスタイル */
+.container {
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* メンバー一覧表示カードのスタイル */
+.member-card {
+    background: linear-gradient(135deg, #f9f9f7, #e0f7d9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    padding-bottom: 40px; /* ボタン分のスペース確保 */
+}
+
+.member-card.visible {
+    opacity: 1;
+}
+
+/* ボタンのスタイル */
+.member-card .btn {
+    font-size: 0.7em; /* 文字サイズを小さめに */
+    padding: 5px 10px; /* 余白を減らす */
+    margin: 2px;
+}
+
+.member-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* プロフィール画像のスタイル */
+.member-card img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* メンバー詳細のテキスト */
+.member-details {
+    flex-grow: 1;
+    text-align: left;
+    width: 100%;
+}
+
+.member-header h3 {
+    margin: 0;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #333;
+}
+
+.member-header p.furigana {
+    margin: 2px 7px 0px 0px;
+    font-size: 0.6em;
+    color: #666;
+}
+
+/* 見出しのスタイル */
+.member-bio-heading {
+    background-color: #968c84;
+    color: white;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    font-size: 0.7em;
+}
+
+.member-bio {
+    font-size: 0.8em;
+    color: #333;
+}
+
+/* タブレット対応 */
+@media (max-width: 768px) {
+    .member-card {
+        width: 48%;
+    }
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+    .member-card {
+        width: 100%;
+    }
+
+    .member-card img {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,64 @@
+/* ヘッダーの高さ分の余白を追加してフォームを下にずらす */
+body {
+    padding-top: 60px; /* ヘッダーの高さを考慮して余白を追加 */
+
+/* フォーム全体のレイアウト */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 600px;
+    font-size: 16px;
+}
+
+/* ラベルと入力フィールドのスタイル */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea,
+.form-container select {
+    width: 100%; /* 入力フィールドを100%幅に */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 1em;
+    box-sizing: border-box; /* 幅を正確に制御 */
+}
+
+/* ファイル選択とチェックボックスのスタイル */
+.form-container input[type="file"],
+.form-container input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+/* ボタンのスタイル */
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #e68a00;
+}
+
+/* 現在の画像のスタイル */
+.form-container img {
+    margin-bottom: 20px;
+    max-width: 200px;
+    border-radius: 10px;
+}
